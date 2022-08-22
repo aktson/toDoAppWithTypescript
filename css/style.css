@@ -93,7 +93,7 @@ header {
 }
 #edit-task-input:enabled {
 	border: 1px solid #4caf50;
-	border-bottom: 0px solid transparent;
+
 	padding: auto 5px;
 }
 
@@ -105,9 +105,11 @@ header {
 	transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76);
 	margin-bottom: 10px;
 	overflow: hidden;
+	animation: fadeIn 0.5s forwards;
 }
 
-#list-item.show {
-	transform: translateY(0px);
-	transition: all 0.5s cubic-bezier(0.36, -0.64, 0.34, 1.76);
+@keyframes fadeIn {
+	to {
+		transform: translateY(0px);
+	}
 }

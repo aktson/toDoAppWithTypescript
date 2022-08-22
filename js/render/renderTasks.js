@@ -26,12 +26,6 @@ export function renderTasks(tasks) {
                                             <span><i class="material-icons"  id="clear-btn"  data-id=${task.id} >clear</i></span>
                                         </div>
                                     </li>`;
-        const listItems = document.querySelectorAll("#list-item");
-        listItems.forEach((item) => {
-            setTimeout(function () {
-                item.classList.add("show");
-            }, 5);
-        });
     });
     const editBtns = document.querySelectorAll("#edit-btn");
     editBtns.forEach((btn) => {

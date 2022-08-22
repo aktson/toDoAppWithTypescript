@@ -11,7 +11,7 @@ if (tasksInStorage.length === 0) {
 	renderDefaultMessage("Nothing here yet!! Add somthing to appear here", "sentiment_very_satisfied");
 }
 
-export function renderTasks(tasks) {
+export function renderTasks(tasks: StrNumBol) {
 	tasksContainer.innerHTML = "";
 
 	let checked = "";
@@ -35,14 +35,6 @@ export function renderTasks(tasks) {
                                             <span><i class="material-icons"  id="clear-btn"  data-id=${task.id} >clear</i></span>
                                         </div>
                                     </li>`;
-
-		const listItems = document.querySelectorAll("#list-item");
-
-		listItems.forEach((item) => {
-			setTimeout(function () {
-				item.classList.add("show");
-			}, 5);
-		});
 	});
 
 	const editBtns = document.querySelectorAll<HTMLButtonElement>("#edit-btn");
@@ -167,7 +159,7 @@ export function renderTasks(tasks) {
 	/////////////////end of checkbox event ///////////////////////////
 }
 
-function renderDefaultMessage(message, icon) {
+function renderDefaultMessage(message: string, icon: string) {
 	tasksContainer.innerHTML = "";
 	tasksContainer.innerHTML = `<div class="row ">
                                     <div class="col s12 ">

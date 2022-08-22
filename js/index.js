@@ -27,8 +27,10 @@ function addTasks(event) {
             curruntTaskInStorage.push(newTask);
             saveToStorage(toDoList, curruntTaskInStorage);
             renderTasks(curruntTaskInStorage);
+            // addClassToList();
             input.value = "";
             input.focus();
         }
     }
 }
+console.log("ankit");
